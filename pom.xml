@@ -35,7 +35,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>edu.cs.utexas.HadoopEx.WordCount</mainClass>
+							<mainClass>edu.cs.utexas.HadoopEx.primarymission.HourErrorJob</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -63,6 +63,13 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.34</version>
+			<scope>provided</scope>
 		</dependency>
 
 

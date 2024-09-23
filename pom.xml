@@ -35,7 +35,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>edu.cs.utexas.HadoopEx.primarymission.HourErrorJob</mainClass>
+							<mainClass>edu.cs.utexas.HadoopEx.secondarymission.PersonErrorTopKDriver</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

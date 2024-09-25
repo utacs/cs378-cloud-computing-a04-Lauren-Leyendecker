@@ -20,6 +20,9 @@ public class EfficientEarnerReducer extends  Reducer<Text, TupleWritable, Text, 
            tripTime += ((IntWritable) value.get(0)).get();
            money += ((FloatWritable) value.get(1)).get();
        }
+
+       System.out.println("what is tripTime?" + tripTime);
+       System.out.println("what is money: " + money);
        
        float dollarPerTime = money / tripTime;
 

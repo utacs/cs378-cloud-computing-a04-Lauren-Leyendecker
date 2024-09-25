@@ -32,6 +32,10 @@ public class EfficientEarnerMapper extends Mapper<Object, Text, Text, TupleWrita
             return;
         }
 
+        if(timeOfTrip == 0){
+            return;
+        }
+
         float floatSum = 0;
         try {
             for (int i = 11; i <= 15; i++) {
@@ -49,7 +53,7 @@ public class EfficientEarnerMapper extends Mapper<Object, Text, Text, TupleWrita
             return;
         }
 
-
+        System.out.println("timeOfTrip: " + timeOfTrip + ", floatSum: " + floatSum);
         context.write(new Text(hackLicense), new TupleWritable(new Writable[] {
 				new IntWritable(timeOfTrip), new FloatWritable(floatSum)
 		}));

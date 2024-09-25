@@ -10,7 +10,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class EfficientEarnerMapper extends Mapper<Object, Text, Text, TupleWritable> {
+public class EfficientEarnerMapper extends Mapper<Object, Text, Text, IntFloatWritable> {
 
     @SneakyThrows
     public void map(Object key, Text value, Context context)
@@ -54,9 +54,7 @@ public class EfficientEarnerMapper extends Mapper<Object, Text, Text, TupleWrita
         }
 
         System.out.println("timeOfTrip: " + timeOfTrip + ", floatSum: " + floatSum);
-        context.write(new Text(hackLicense), new TupleWritable(new Writable[] {
-				new IntWritable(timeOfTrip), new FloatWritable(floatSum)
-		}));
+        context.write(new Text(hackLicense), new IntFloatWritable(timeOfTrip, floatSum));
 
     }
 

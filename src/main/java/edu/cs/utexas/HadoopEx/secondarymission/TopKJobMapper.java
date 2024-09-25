@@ -12,7 +12,7 @@ import java.util.PriorityQueue;
 import org.apache.log4j.Logger;
 
 
-public class TopKJobMapper extends Mapper<Text, FloatWritable, Text, FloatWritable> {
+public class TopKJobMapper extends Mapper<Text, Text, Text, FloatWritable> {
 
 	private Logger logger = Logger.getLogger(TopKJobMapper.class);
 
@@ -30,11 +30,11 @@ public class TopKJobMapper extends Mapper<Text, FloatWritable, Text, FloatWritab
 	 * @param key
 	 * @param value a float value stored as a string
 	 */
-	public void map(Text key, FloatWritable value, Context context)
+	public void map(Text key, Text value, Context context)
 			throws IOException, InterruptedException {
 
-		pq.add(new TaxiRecord(key, value));
-
+		pq.add(new TaxiRecord(new Text(key), new FloatWritable(Float.parseFloat(value.toString()))));
+		logger.info("TopKMapper Key Status: " + key.toString());
 		if (pq.size() > 5) {
 			pq.poll();
 		}

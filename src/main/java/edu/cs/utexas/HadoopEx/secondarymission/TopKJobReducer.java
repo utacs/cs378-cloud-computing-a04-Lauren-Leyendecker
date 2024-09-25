@@ -40,7 +40,7 @@ public class TopKJobReducer extends  Reducer<Text, FloatWritable, Text, FloatWri
            logger.info("Reducer Text: counter is " + counter);
            logger.info("Reducer Text: Add this item  " + new TaxiRecord(key, value).toString());
 
-           pq.add(new TaxiRecord(key, value));
+           pq.add(new TaxiRecord(new Text(key), new FloatWritable(value.get())));
 
            logger.info("Reducer Text: " + key.toString() + " , Count: " + value.toString());
            logger.info("PQ Status: " + pq.toString());

@@ -79,7 +79,7 @@ public class PersonErrorTopKDriver extends Configured implements Tool {
 
 			// specify input and output directories
 			FileInputFormat.addInputPath(job2, new Path(args[1]));
-			job2.setInputFormatClass(TextInputFormat.class);
+			job2.setInputFormatClass(KeyValueTextInputFormat.class);
 
 			FileOutputFormat.setOutputPath(job2, new Path(args[2]));
 			job2.setOutputFormatClass(TextOutputFormat.class);

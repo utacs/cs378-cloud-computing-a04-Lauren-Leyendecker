@@ -53,7 +53,7 @@ public class EfficientEarnerDriver extends Configured implements Tool {
 
 			// specify output types
 			job.setOutputKeyClass(Text.class);
-			job.setOutputValueClass(TupleWritable.class);
+			job.setOutputValueClass(IntFloatWritable.class);
 
 			// specify input and output directories
 			FileInputFormat.addInputPath(job, new Path(args[0]));

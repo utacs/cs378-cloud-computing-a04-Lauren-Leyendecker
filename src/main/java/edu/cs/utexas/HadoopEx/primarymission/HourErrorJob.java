@@ -31,7 +31,7 @@ public class HourErrorJob extends Configured implements Tool {
 	/**
 	 * 
 	 */
-	public int run(String args[]) {
+	public int run(String[] args) {
 		try {
 			Configuration conf = new Configuration();
 

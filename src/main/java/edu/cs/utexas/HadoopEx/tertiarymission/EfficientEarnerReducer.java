@@ -22,6 +22,6 @@ public class EfficientEarnerReducer extends  Reducer<Text, IntFloatWritable, Tex
        
        float dollarPerTime = money / tripTime;
 
-       context.write(new Text(key), new FloatWritable(dollarPerTime));
+       context.write(new Text(key), new FloatWritable(dollarPerTime * 60));
    }
 }

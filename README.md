@@ -2,13 +2,16 @@
 
 ## Team members' names 
 
-1. Student Name:
+1. Student Name: Bersam Basagaoglu
 
-   Student UT EID:
+   Student UT EID: BB42642
 
-2. Student Name:
+2. Student Name: Shreya Kappala
 
-   Student UT EID:
+   Student UT EID: SK55965
+3. Student Name: Lauren Leyendecker
+
+   Student UT EID: LSL738
 
  ...
 
